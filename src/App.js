@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Reporter from './Reporter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    {/* Use Reporter with attribute 'name' */}
+    <Reporter name="Antero Mertaranta" image="Mörkö.png">Löikö mörkö sisään</Reporter>
+
+    {/* Use Reporter with children content and 'name' attribute */}
+    <Reporter name="Kevin McGran">I know it's a rough time now, but did you at least enjoy playing in the tournament</Reporter>
+  </div>
+);
 
 export default App;
